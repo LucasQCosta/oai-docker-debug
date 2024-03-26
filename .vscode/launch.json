@@ -1,0 +1,31 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(gdb) Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/home/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem",
+			"args": [
+				"-O",
+				"./targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf",
+				"--sa",
+				"--gNBs.[0].min_rxtxtime",
+				"6",
+				"--rfsim",
+			],
+			"stopAtEntry": false,
+			"cwd": "/home/openairinterface5g",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
+}
