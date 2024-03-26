@@ -1,0 +1,13 @@
+services:
+    basestation:
+        build:
+            context: ./
+            dockerfile: ./basestation/Dockerfile
+        image: oai
+        privileged: true
+        network_mode: host
+        stdin_open: true
+        tty: true
+        volumes:
+            - "./.vscode:/home/openairinterface5g/.vscode"
+            - "/dev/bus/usb:/dev/bus/usb"
